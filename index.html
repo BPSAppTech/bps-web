@@ -3,22 +3,39 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blue Pen Solutions | Technology Consulting</title>
-  <meta name="description" content="Blue Pen Solutions is a technology consulting company. We help organizations plan, build, and run software: custom web applications, cloud and DevOps, AI and automation, security and compliance readiness, and technical leadership.">
+  <title>Blue Pen Solutions | Technology Consulting for Outcomes That Last</title>
+  <meta name="description" content="Blue Pen Solutions is a technology consulting firm. Our team helps organizations plan, build, and run software—custom applications, cloud and DevOps, AI and automation, security readiness, and technical leadership—with clear outcomes from day one.">
   <meta name="theme-color" content="#0b3d91">
-  <!-- TODO(Tom): set the final site URL once the domain is decided, then update canonical + og:url + og:image to absolute URLs. -->
-  <link rel="canonical" href="https://bluepensolutions.com/">
+  <!-- TODO(Tom): set the final site URL once the domain is decided; update canonical, og:url, JSON-LD url, sitemap.xml, and robots.txt Sitemap to absolute production URLs. -->
+  <link rel="canonical" href="./">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Blue Pen Solutions">
   <meta property="og:title" content="Blue Pen Solutions | Technology Consulting">
-  <meta property="og:description" content="Technology consulting that turns strategy into working software. Custom applications, cloud, AI and automation, security and compliance readiness.">
-  <meta property="og:url" content="https://bluepensolutions.com/">
-  <meta property="og:image" content="https://bluepensolutions.com/assets/og-image.png">
+  <meta property="og:description" content="We turn strategy into working software. Custom applications, cloud and DevOps, AI and automation, and security readiness—delivered by an experienced consulting team.">
+  <meta property="og:url" content="./">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Blue Pen Solutions — technology consulting that turns strategy into working software">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blue Pen Solutions | Technology Consulting">
+  <meta name="twitter:description" content="We turn strategy into working software. Custom applications, cloud, AI and automation, and security readiness.">
+  <meta name="twitter:image" content="assets/og-image.png">
+  <meta name="twitter:image:alt" content="Blue Pen Solutions — technology consulting">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="assets/logo-mark.svg" as="image" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Blue Pen Solutions","url":"https://bluepensolutions.com/","logo":"https://bluepensolutions.com/assets/favicon.svg","description":"Technology consulting: custom software, cloud and DevOps, AI and automation, security and compliance readiness, and technical leadership."}
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Blue Pen Solutions",
+    "url": "./",
+    "logo": "assets/favicon.svg",
+    "description": "Technology consulting firm: custom software, cloud and DevOps, AI and automation, security and compliance readiness, and embedded technical leadership.",
+    "sameAs": []
+  }
   </script>
 </head>
 <body>
@@ -27,11 +44,11 @@
   <header class="site-header" id="top">
     <div class="container nav-wrap">
       <a class="brand" href="#top" aria-label="Blue Pen Solutions home">
-        <img src="assets/logo-mark.svg" alt="" width="36" height="36">
+        <img src="assets/logo-mark.svg" alt="" width="36" height="36" decoding="async" fetchpriority="high">
         <span>Blue Pen <strong>Solutions</strong></span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Menu</span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="sr-only">Menu</span><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span><span class="bar" aria-hidden="true"></span>
       </button>
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <a href="#services">Services</a>
@@ -44,145 +61,145 @@
   </header>
 
   <main id="main">
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Technology consulting</p>
-          <h1>Business first. Technology that delivers.</h1>
-          <p class="lead">Blue Pen Solutions helps organizations turn plans into working software. We start with the results you need, then design, build, and run the systems that get you there, with clear communication from the first conversation to long after launch.</p>
+          <h1 id="hero-heading">Strategy into software your business can rely on</h1>
+          <p class="lead">Blue Pen Solutions partners with organizations to design, build, and operate technology that supports real business outcomes. Our team aligns architecture, delivery, and operations with your goals—and keeps communication clear from discovery through long-term support.</p>
           <div class="hero-cta">
             <a class="btn" href="#contact">Start a conversation</a>
-            <a class="btn btn-ghost" href="#services">Explore services</a>
+            <a class="btn btn-ghost" href="#services">See our services</a>
           </div>
         </div>
-        <div class="hero-card" aria-hidden="true">
-          <div class="hc-row"><span class="dot"></span><span>Strategy</span></div>
-          <div class="hc-row"><span class="dot"></span><span>Architecture</span></div>
-          <div class="hc-row"><span class="dot"></span><span>Build &amp; test</span></div>
-          <div class="hc-row"><span class="dot"></span><span>Release &amp; operate</span></div>
-          <div class="hc-row"><span class="dot"></span><span>Improve</span></div>
+        <div class="hero-card" role="img" aria-label="Delivery lifecycle: strategy, architecture, build and test, release and operate, improve">
+          <div class="hc-row"><span class="dot" aria-hidden="true"></span><span>Strategy</span></div>
+          <div class="hc-row"><span class="dot" aria-hidden="true"></span><span>Architecture</span></div>
+          <div class="hc-row"><span class="dot" aria-hidden="true"></span><span>Build &amp; test</span></div>
+          <div class="hc-row"><span class="dot" aria-hidden="true"></span><span>Release &amp; operate</span></div>
+          <div class="hc-row"><span class="dot" aria-hidden="true"></span><span>Improve</span></div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
+    <section id="services" class="section" aria-labelledby="services-heading">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Services</p>
-          <h2>What we do</h2>
-          <p>Engagements range from a focused assessment to building and operating a complete platform. We can own a project end to end or work alongside your existing team.</p>
+          <h2 id="services-heading">Capabilities that move the needle</h2>
+          <p>From a focused assessment to owning a platform end to end, we scope engagements around measurable results. We can lead delivery or integrate with your in-house team.</p>
         </div>
         <div class="cards">
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
             <h3>Custom software &amp; web apps</h3>
-            <p>Modern web applications, internal tools, and customer portals, built with tested, maintainable code and designed around how your business actually works.</p>
+            <p>Customer-facing products, internal tools, and portals—built with tested, maintainable code and workflows that match how your organization operates.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1.5A4 4 0 1117 18H7z"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1.5A4 4 0 1117 18H7z"/></svg>
             <h3>Cloud &amp; DevOps</h3>
-            <p>Cloud architecture, CI/CD pipelines, environments, monitoring, and release practices that let you ship often and sleep well.</p>
+            <p>Cloud architecture, CI/CD, environments, monitoring, and release practices so you ship confidently and recover quickly when something goes wrong.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3"/></svg>
             <h3>AI &amp; automation</h3>
-            <p>Practical AI and workflow automation that removes manual steps, connects disconnected systems, and puts accurate data where people need it.</p>
+            <p>Practical automation and AI that cut manual work, connect systems, and surface reliable data—without adding unnecessary complexity.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
             <h3>Security &amp; compliance readiness</h3>
-            <p>Planning and preparation for frameworks such as SOC 2 and HIPAA: gap assessments, policies, controls, and roadmaps that make audits predictable.</p>
+            <p>Gap assessments, control design, and roadmaps for frameworks such as SOC 2 and HIPAA—so audits and customer security reviews are predictable, not disruptive.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
-            <h3>Fractional technical leadership</h3>
-            <p>CTO-level guidance on a flexible basis: technology roadmaps, architecture decisions, vendor and build-vs-buy evaluations, and engineering practices.</p>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+            <h3>Embedded technical leadership</h3>
+            <p>Senior technology leadership on a flexible engagement model: roadmaps, architecture decisions, vendor and build-vs-buy analysis, and engineering standards.</p>
           </article>
           <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h6v6H4zM14 11h6v6h-6zM10 10h4v4"/></svg>
+            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h6v6H4zM14 11h6v6h-6zM10 10h4v4"/></svg>
             <h3>Systems integration</h3>
-            <p>Connecting the platforms you already rely on, such as commerce, shipping, payments, and accounting, so data flows once and stays consistent.</p>
+            <p>Connect commerce, logistics, payments, accounting, and other platforms so data flows once and stays consistent across the stack.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="approach" class="section section-alt">
+    <section id="approach" class="section section-alt" aria-labelledby="approach-heading">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">How we work</p>
-          <h2>A business-oriented approach</h2>
-          <p>We find out the results you want to achieve, then adapt technology to deliver them, and we stay with you until you have them.</p>
+          <h2 id="approach-heading">Business outcomes first, technology second</h2>
+          <p>We define success in terms your stakeholders recognize, then choose the architecture and delivery path that gets there—with visibility and accountability at every step.</p>
         </div>
         <ol class="steps">
           <li>
-            <span class="step-num">01</span>
+            <span class="step-num" aria-hidden="true">01</span>
             <h3>Discover</h3>
-            <p>We learn your goals, constraints, and current systems, and agree on what success looks like.</p>
+            <p>We align on goals, constraints, and current systems, and document what success looks like before we write a line of code.</p>
           </li>
           <li>
-            <span class="step-num">02</span>
+            <span class="step-num" aria-hidden="true">02</span>
             <h3>Design</h3>
-            <p>A business case, architecture, and phased plan, so every investment maps to a clear outcome.</p>
+            <p>Business case, target architecture, and a phased plan so each investment ties to a clear outcome and timeline.</p>
           </li>
           <li>
-            <span class="step-num">03</span>
+            <span class="step-num" aria-hidden="true">03</span>
             <h3>Build</h3>
-            <p>Short iterations with automated testing, code review, and regular demos. No surprises at the end.</p>
+            <p>Short iterations with automated testing, peer review, and regular demos—so progress is visible and risk stays manageable.</p>
           </li>
           <li>
-            <span class="step-num">04</span>
+            <span class="step-num" aria-hidden="true">04</span>
             <h3>Release &amp; support</h3>
-            <p>Careful, staged releases, monitoring, documentation, and training to make sure the value sticks.</p>
+            <p>Staged releases, monitoring, runbooks, and handoff so teams can operate the solution and the value holds after launch.</p>
           </li>
         </ol>
-        <div class="principles">
-          <div><h3>Transparent</h3><p>Plain-language updates, visible progress, and honest trade-offs.</p></div>
-          <div><h3>Quality built in</h3><p>Testing, review, and observability are part of the work, not extras.</p></div>
-          <div><h3>Above and beyond</h3><p>We bring problem-solving persistence: if there is a will, there is a way.</p></div>
+        <div class="principles" role="list">
+          <div role="listitem"><h3>Transparent</h3><p>Plain-language status, visible progress, and honest trade-offs when priorities shift.</p></div>
+          <div role="listitem"><h3>Quality built in</h3><p>Testing, review, and observability are part of delivery—not line items you have to negotiate for later.</p></div>
+          <div role="listitem"><h3>Committed</h3><p>We stay engaged until the outcome is real in production, not just signed off in a deck.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="work" class="section">
+    <section id="work" class="section" aria-labelledby="work-heading">
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Selected work</p>
-          <h2>Examples of what we deliver</h2>
-          <p>Client names are kept confidential. These summaries show the kinds of problems we solve.</p>
+          <h2 id="work-heading">Representative engagements</h2>
+          <p>Client identities stay confidential. These summaries illustrate the kinds of problems our team takes on and the outcomes we target.</p>
         </div>
         <div class="cases">
           <article class="case">
             <p class="case-tag">Retail &amp; e-commerce</p>
             <h3>Resale operations platform</h3>
-            <p>A web platform that runs day-to-day operations for a resale business: inventory and listings synchronized with online marketplaces, sales orders, integrated shipping labels, and payment links, backed by automated testing and a staged release process.</p>
+            <p>A web platform for day-to-day resale operations: inventory and listings synchronized with online marketplaces, order management, integrated shipping labels, and payment links—supported by automated testing and staged releases.</p>
             <ul class="tags"><li>Web application</li><li>Marketplace integration</li><li>DevOps</li></ul>
           </article>
           <article class="case">
             <p class="case-tag">Healthcare</p>
             <h3>Compliance readiness program</h3>
-            <p>Planning and structure for a healthcare organization preparing for SOC 2 and HIPAA: scoping, gap analysis, policy and control mapping, and a practical roadmap to audit readiness.</p>
+            <p>Structured preparation for SOC 2 and HIPAA: scoping, gap analysis, policy and control mapping, and a practical roadmap toward audit readiness.</p>
             <ul class="tags"><li>SOC 2</li><li>HIPAA</li><li>Program planning</li></ul>
           </article>
           <article class="case">
             <p class="case-tag">Software product</p>
             <h3>SaaS product build &amp; operations</h3>
-            <p>Product engineering for a subscription web application, from architecture and feature delivery to production monitoring and release management.</p>
+            <p>Product engineering for a subscription web application—from architecture and feature delivery through production monitoring and release management.</p>
             <ul class="tags"><li>SaaS</li><li>Cloud</li><li>Observability</li></ul>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section section-alt">
+    <section id="about" class="section section-alt" aria-labelledby="about-heading">
       <div class="container about-grid">
         <div>
           <p class="eyebrow">About</p>
-          <h2>About Blue Pen Solutions</h2>
-          <p>Blue Pen Solutions is a technology consulting company. We bring deep experience in enterprise software architecture, engineering leadership, and modern cloud development to organizations that need technology to work for the business, not the other way around.</p>
-          <p>Our philosophy has always been simple: take a business-oriented focus first and use technology second. We work with established companies and growing ones, providing complete solutions or targeted expertise as needed.</p>
+          <h2 id="about-heading">About Blue Pen Solutions</h2>
+          <p>Blue Pen Solutions is a technology consulting firm. Our practitioners bring experience in enterprise architecture, engineering leadership, and cloud-native delivery to organizations that need software to serve the business—not the other way around.</p>
+          <p>We work with established companies and growing ones, as a full delivery partner or as targeted expertise alongside your team. Our focus stays on outcomes, clarity, and systems you can operate for the long term.</p>
         </div>
-        <ul class="checklist">
+        <ul class="checklist" aria-label="Areas of experience">
           <li>Enterprise architecture &amp; software engineering</li>
           <li>Retail, e-commerce, and operations systems</li>
           <li>Healthcare compliance planning</li>
@@ -192,12 +209,12 @@
       </div>
     </section>
 
-    <section id="contact" class="section contact">
+    <section id="contact" class="section contact" aria-labelledby="contact-heading">
       <div class="container contact-inner">
-        <h2>Let's talk about what you're building</h2>
-        <p>Tell us about your goals, and we'll follow up to schedule an introductory conversation.</p>
-        <!-- TODO(Tom): replace the placeholder address below with the real contact email (it appears twice: href and link text). -->
-        <a class="btn btn-light" href="mailto:hello@bluepensolutions.com?subject=Project%20inquiry">hello@bluepensolutions.com</a>
+        <h2 id="contact-heading">Tell us what you are building</h2>
+        <p>Share your goals and timeline. We will follow up to schedule an introductory conversation with the right people on our team.</p>
+        <!-- TODO(Tom): replace the placeholder address below with the real contact email (href and visible link text). -->
+        <a class="btn btn-light" href="mailto:hello@bluepensolutions.com?subject=Project%20inquiry">TODO: hello@bluepensolutions.com</a>
       </div>
     </section>
   </main>
@@ -205,7 +222,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="brand brand-footer">
-        <img src="assets/logo-mark.svg" alt="" width="28" height="28">
+        <img src="assets/logo-mark.svg" alt="" width="28" height="28" decoding="async">
         <span>Blue Pen <strong>Solutions</strong></span>
       </div>
       <p>&copy; <span id="year">2026</span> Blue Pen Solutions. All rights reserved.</p>
@@ -215,13 +232,19 @@
   <script>
     (function () {
       var t = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
+      if (!t || !n) return;
       t.addEventListener('click', function () {
         var open = t.getAttribute('aria-expanded') === 'true';
         t.setAttribute('aria-expanded', String(!open));
+        t.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
         n.classList.toggle('open', !open);
       });
       n.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') { t.setAttribute('aria-expanded', 'false'); n.classList.remove('open'); }
+        if (e.target.tagName === 'A') {
+          t.setAttribute('aria-expanded', 'false');
+          t.setAttribute('aria-label', 'Open menu');
+          n.classList.remove('open');
+        }
       });
       document.getElementById('year').textContent = new Date().getFullYear();
     })();
