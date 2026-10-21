@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <!-- Mark redrawn from the original Blue Pen Solutions swoosh logo. Colors: tile #1f3fae, mark #f5f1e8. -->
   <rect width="64" height="64" rx="14" fill="#1f3fae"/>
-  <g transform="rotate(-8 32 32)">
-    <path fill="#f5f1e8" fill-rule="evenodd" d="M3 32a29 17 0 1 0 58 0a29 17 0 1 0-58 0zM12.5 31a19.5 9 -6 1 0 39 2a19.5 9 -6 1 0-39-2z"/>
-    <ellipse cx="32" cy="32" rx="11.5" ry="5" fill="#f5f1e8"/>
-    <path d="M1 38 Q8 37 14.5 33.5 M49.5 30.5 Q56 27 63 26" stroke="#1f3fae" stroke-width="3.4" fill="none"/>
+  <g fill="#f5f1e8" transform="translate(0.954 19.967) scale(0.060166)">
+    <path d="M55 135 C120 80 300 35 470 30 C600 28 700 50 718 90 C722 110 700 113 680 106 C620 96 520 92 420 96 C300 100 180 110 110 127 C80 134 62 138 55 135 Z"/>
+    <path d="M216 158 C140 162 36 186 34 232 C36 290 160 325 300 345 C420 360 520 366 580 368 C570 360 520 344 440 318 C330 282 240 240 212 196 C205 178 208 164 216 158 Z"/>
+    <path d="M842 82 C935 110 998 155 994 205 C988 270 880 312 760 312 C700 312 630 300 582 295 C640 282 720 268 772 230 C808 196 852 130 842 82 Z"/>
+    <ellipse cx="500" cy="188" rx="190" ry="62"/>
   </g>
 </svg>
