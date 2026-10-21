@@ -337,6 +337,14 @@ main { position: relative; }
 .about { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .9fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
 .about__text p:not(.lede) { color: var(--ink-soft); max-width: 36rem; }
 .about__text .lede { margin-bottom: 1.2rem; }
+.about__links { display: flex; flex-wrap: wrap; gap: .4rem .75rem; align-items: baseline; }
+.signoff { position: relative; background: var(--card, #fbf9f4); border: 1px solid var(--rule); box-shadow: 0 1px 0 var(--rule), 0 14px 30px -22px rgba(20,30,60,.35); padding: 1.5rem 1.6rem 1.25rem; transform: rotate(-.6deg); }
+.signoff .kicker { margin-bottom: .75rem; }
+.signoff p { font-size: 1.05rem; line-height: 1.55; color: var(--ink-soft); margin: 0 0 .85rem; }
+.signoff__motto { font-style: italic; color: var(--pen) !important; font-size: 1.2rem !important; line-height: 1.4 !important; }
+.signoff__sig { display: flex; align-items: center; gap: .6rem; margin: .4rem 0 0 !important; font-style: italic; color: var(--ink) !important; font-size: 1.15rem !important; }
+.pen--sig { width: 5.5rem; height: 1.9rem; }
+@media (prefers-reduced-motion: reduce) { .signoff { transform: none; } }
 .record { border-top: 2px solid var(--ink); padding-top: 1rem; }
 .record .kicker { margin-bottom: .4rem; }
 .record dl { margin: 0; }
