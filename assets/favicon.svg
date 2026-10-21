@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <!-- Mark redrawn from the original Blue Pen Solutions swoosh logo. Colors: tile #1f3fae, mark #f5f1e8. -->
   <rect width="64" height="64" rx="14" fill="#1f3fae"/>
-  <g fill="#f5f1e8" transform="translate(0.954 19.967) scale(0.060166)">
+  <g fill="#f5f1e8" transform="translate(32 32) rotate(-15) scale(0.056 0.0952) translate(-516.0 -200.0)">
     <path d="M55 135 C120 80 300 35 470 30 C600 28 700 50 718 90 C722 110 700 113 680 106 C620 96 520 92 420 96 C300 100 180 110 110 127 C80 134 62 138 55 135 Z"/>
     <path d="M216 158 C140 162 36 186 34 232 C36 290 160 325 300 345 C420 360 520 366 580 368 C570 360 520 344 440 318 C330 282 240 240 212 196 C205 178 208 164 216 158 Z"/>
     <path d="M842 82 C935 110 998 155 994 205 C988 270 880 312 760 312 C700 312 630 300 582 295 C640 282 720 268 772 230 C808 196 852 130 842 82 Z"/>
