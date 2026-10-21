@@ -1,7 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Blue Pen Solutions">
-  <rect width="64" height="64" rx="14" fill="#0b3d91"/>
-  <path d="M32 9 L45 30 L36 52 L32 56 L28 52 L19 30 Z" fill="#ffffff"/>
-  <path d="M32 30 L32 50" stroke="#0b3d91" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="32" cy="29" r="4" fill="#0b3d91"/>
-  <circle cx="32" cy="29" r="1.6" fill="#5fd4a0"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#1f3fae"/>
+  <g transform="rotate(-38 32 32)">
+    <path d="M21 7h22l3 16c0 11-8 21-14 34-6-13-14-23-14-34z" fill="#f5f1e8"/>
+    <path d="M32 33v21" stroke="#1f3fae" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="32" cy="29" r="4" fill="#1f3fae"/>
+    <path d="M21 13h22" stroke="#1f3fae" stroke-width="2"/>
+  </g>
 </svg>

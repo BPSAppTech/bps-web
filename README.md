@@ -1,25 +1,18 @@
-# Blue Pen Solutions: marketing site
+# Blue Pen Solutions: website (redesign)
 
-Static, no-build marketing site for Blue Pen Solutions (technology consulting). Plain HTML/CSS with a few lines of JS for the mobile menu.
+Plain static HTML/CSS with one small optional script. No build step. GitHub Pages ready (`.nojekyll` included).
 
-## Structure
-- `index.html`: the single page (hero, services, approach, selected work, about, contact)
-- `styles.css`: all styles (responsive, blue theme)
-- `assets/`: favicon/logo mark (SVG), Open Graph image (SVG source + PNG)
-- `.nojekyll`: serve files as-is on GitHub Pages
-- `screenshots/`: desktop and mobile full-page renders
+```
+index.html            the whole site (one page: hero, services at a glance, seven numbered chapters)
+styles.css            all styles; design tokens at the top
+pen.js                optional: draws the pen marks in on scroll (skipped with reduced motion; marks show without it)
+assets/fonts/         self-hosted, subset WOFF2: Newsreader (roman + italic, variable) and IBM Plex Mono (SIL OFL)
+assets/favicon.svg    pen-nib favicon (+ favicon-32.png, apple-touch-icon.png)
+assets/og-image.png   1200x630 social card
+```
 
-## Local preview
-Open `index.html` in a browser, or run `python3 -m http.server 8080` and visit http://localhost:8080.
+Preview locally: `python3 -m http.server 8000` in this folder, then open http://localhost:8000.
 
-## Deploy to GitHub Pages
-1. Push this repo to GitHub.
-2. Settings → Pages → Build and deployment → "Deploy from a branch" → `main` / `(root)`.
-3. Optional custom domain: add a `CNAME` file with the domain and point DNS at GitHub Pages.
-
-Note: Pages on a **private** repo requires GitHub Pro/Team/Enterprise; on GitHub Free the repo must be public.
-
-## TODO before going live
-- [ ] Replace the placeholder contact email `hello@bluepensolutions.com` in `index.html` (href + link text).
-- [ ] Confirm the final domain; update `canonical`, `og:url`, `og:image`, and JSON-LD URLs in `index.html`.
-- [ ] Review the "Selected work" summaries and the About copy.
+## Before publishing (TODOs marked in index.html)
+- Contact email `hello@bluepensolutions.com` is a placeholder.
+- Canonical / og:url / og:image / JSON-LD assume the domain `bluepensolutions.com`.

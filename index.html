@@ -3,228 +3,701 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blue Pen Solutions | Technology Consulting</title>
-  <meta name="description" content="Blue Pen Solutions is a technology consulting company. We help organizations plan, build, and run software: custom web applications, cloud and DevOps, AI and automation, security and compliance readiness, and technical leadership.">
-  <meta name="theme-color" content="#0b3d91">
-  <!-- TODO(Tom): set the final site URL once the domain is decided, then update canonical + og:url + og:image to absolute URLs. -->
+  <title>Blue Pen Solutions · Hands-on technology leadership for Series A &amp; B companies</title>
+  <meta name="description" content="Fractional technology leadership that also builds. Architecture and planning, AI-first project delivery, SOC 2 and HIPAA readiness, and technical due diligence for Series A and B companies. On your team when you need us, off the clock when you don’t.">
+  <meta name="theme-color" content="#f5f1e8">
+  <meta name="color-scheme" content="light">
+
+  <!-- TODO(Tom): confirm the final domain. If it is not bluepensolutions.com, update canonical, og:url, og:image and the JSON-LD below. -->
   <link rel="canonical" href="https://bluepensolutions.com/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Blue Pen Solutions">
-  <meta property="og:title" content="Blue Pen Solutions | Technology Consulting">
-  <meta property="og:description" content="Technology consulting that turns strategy into working software. Custom applications, cloud, AI and automation, security and compliance readiness.">
+  <meta property="og:title" content="Blue Pen Solutions · The technology leader who also builds">
+  <meta property="og:description" content="Hands-on fractional technology leadership, architecture and planning, AI-first delivery, SOC 2 &amp; HIPAA, and technical due diligence for Series A and B companies.">
   <meta property="og:url" content="https://bluepensolutions.com/">
   <meta property="og:image" content="https://bluepensolutions.com/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="blue · pen solutions. The technology leader who also builds.">
   <meta name="twitter:card" content="summary_large_image">
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <link rel="preload" href="assets/fonts/newsreader-roman.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plexmono-regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
+
+  <script>
+    // Pen strokes draw themselves in only when JS runs and the visitor allows motion.
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('motion');
+  </script>
+
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Organization","name":"Blue Pen Solutions","url":"https://bluepensolutions.com/","logo":"https://bluepensolutions.com/assets/favicon.svg","description":"Technology consulting: custom software, cloud and DevOps, AI and automation, security and compliance readiness, and technical leadership."}
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Blue Pen Solutions",
+    "url": "https://bluepensolutions.com/",
+    "logo": "https://bluepensolutions.com/assets/apple-touch-icon.png",
+    "email": "hello@bluepensolutions.com",
+    "slogan": "Get clear. Stay focused. Architecture is the plan.",
+    "description": "Hands-on fractional technology leadership for Series A and B companies: architecture and planning, AI-first project delivery and team enablement, SOC 2 and HIPAA readiness, and technical due diligence.",
+    "founder": {
+      "@type": "Person",
+      "name": "Tom Krueger",
+      "jobTitle": "Founder & Principal",
+      "sameAs": ["https://www.linkedin.com/in/thomaskrueger/"]
+    },
+    "knowsAbout": ["Fractional CTO", "Software architecture", "Technical due diligence", "AI-first software development", "Cursor", "Claude Code", "AI code review", "SOC 2", "HIPAA", "AWS", "Cloud infrastructure"]
+  }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Blue Pen Solutions home">
-        <img src="assets/logo-mark.svg" alt="" width="36" height="36">
-        <span>Blue Pen <strong>Solutions</strong></span>
+  <!-- Reusable pen marks. Every path uses pathLength="1" so the draw-in animation is the same for all sizes. -->
+  <svg width="0" height="0" class="sprite" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="pen-check" viewBox="0 0 28 24"><path pathLength="1" d="M3 14.5c2.2 1 4.3 3.2 6.6 6.3C12.4 13.6 17.6 7.2 25 2.6"/></symbol>
+      <symbol id="pen-underline" viewBox="0 0 300 18" preserveAspectRatio="none"><path pathLength="1" d="M3 11.5C62 7.4 151 5.6 297 8.2"/><path pathLength="1" d="M28 15.2C110 11.7 196 11.3 282 12.6"/></symbol>
+      <symbol id="pen-strike" viewBox="0 0 200 14" preserveAspectRatio="none"><path pathLength="1" d="M1 8.6C44 5.2 118 9.8 199 5.4"/></symbol>
+      <symbol id="pen-infinity" viewBox="0 0 40 20"><path pathLength="1" d="M20 10C16 4 6 3 5 10s11 6 15 0 14-6 15 0-11 6-15 0"/></symbol>
+      <symbol id="pen-loop" viewBox="0 0 120 40"><path pathLength="1" d="M4 30C20 30 30 8 46 8c12 0 14 16 4 20-9 3-12-8-2-13C66 6 80 30 116 22"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="masthead">
+    <div class="wrap masthead__inner">
+      <a class="wordmark" href="#top" aria-label="Blue Pen Solutions, back to top">
+        <span class="wordmark__blue">blue</span><span class="wordmark__dot" aria-hidden="true"></span><span class="wordmark__pen">pen</span>
+        <span class="wordmark__solutions">solutions</span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Menu</span><span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-      <nav id="site-nav" class="site-nav" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#approach">Approach</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a class="btn btn-small" href="#contact">Start a conversation</a>
+      <nav class="topnav" aria-label="Primary">
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#standing-seat"><span class="long">How we engage</span><span class="short" aria-hidden="true">Engage</span></a></li>
+          <li><a href="#compliance"><span class="long">Compliance</span><span class="short" aria-hidden="true">SOC&nbsp;2</span></a></li>
+          <li><a href="#capabilities"><span class="long">Capabilities</span><span class="short" aria-hidden="true">Index</span></a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
       </nav>
+      <a class="btn btn--small" href="#contact">Start a conversation</a>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">Technology consulting</p>
-          <h1>Business first. Technology that delivers.</h1>
-          <p class="lead">Blue Pen Solutions helps organizations turn plans into working software. We start with the results you need, then design, build, and run the systems that get you there, with clear communication from the first conversation to long after launch.</p>
-          <div class="hero-cta">
-            <a class="btn" href="#contact">Start a conversation</a>
-            <a class="btn btn-ghost" href="#services">Explore services</a>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero wrap sheet" id="top" aria-labelledby="hero-title">
+      <dl class="memo margin">
+        <div><dt>From</dt><dd>Blue Pen Solutions</dd></div>
+        <div><dt>To</dt><dd>Series A &amp; B founders, CEOs and CTOs</dd></div>
+        <div><dt>Re</dt><dd>Technology leadership, on call</dd></div>
+      </dl>
+
+      <div class="body hero__body">
+        <h1 id="hero-title" class="hero__title">
+          The technology leader who also
+          <span class="circled">builds.<svg class="pen pen--circle" viewBox="0 0 200 84" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M34 20C76 3 168 5 190 31c17 21-26 46-92 46C36 77 5 62 10 41 14 24 48 12 96 9c29-2 57 1 76 8"/></svg></span>
+        </h1>
+
+        <div class="hero__grid">
+          <div class="hero__copy">
+            <p class="lede">Hands-on technology leadership for Series&nbsp;A and B companies. We set the strategy, draw the architecture and write the code, leading your team or working as it.</p>
+            <p class="lede lede--strong">On your team when you need us. Off the clock when you don’t.</p>
+            <div class="actions">
+              <a class="btn" href="#contact">Start a conversation <span aria-hidden="true">→</span></a>
+              <a class="textlink" href="#standing-seat">See how we engage</a>
+            </div>
           </div>
-        </div>
-        <div class="hero-card" aria-hidden="true">
-          <div class="hc-row"><span class="dot"></span><span>Strategy</span></div>
-          <div class="hc-row"><span class="dot"></span><span>Architecture</span></div>
-          <div class="hc-row"><span class="dot"></span><span>Build &amp; test</span></div>
-          <div class="hc-row"><span class="dot"></span><span>Release &amp; operate</span></div>
-          <div class="hc-row"><span class="dot"></span><span>Improve</span></div>
+
+          <figure class="card" aria-labelledby="card-title">
+            <figcaption class="card__head">
+              <span id="card-title">Technology plan</span>
+              <span class="card__meta">marked up</span>
+            </figcaption>
+            <ol class="card__list">
+              <li><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg><span class="sr-only">Done: </span>Roadmap agreed with the CEO</li>
+              <li><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg><span class="sr-only">Done: </span>Architecture drawn, estimate attached</li>
+              <li><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg><span class="sr-only">Done: </span>First release in production</li>
+              <li><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg><span class="sr-only">Done: </span>SOC&nbsp;2 controls mapped</li>
+              <li class="card__struck"><span class="sr-only">Crossed out: </span><del>Six-month contract, billed hourly</del><svg class="pen pen--strike" viewBox="0 0 200 14" preserveAspectRatio="none" aria-hidden="true"><use href="#pen-strike"/></svg></li>
+            </ol>
+            <p class="card__foot">
+              <span>Back in for the next release</span>
+              <svg class="pen pen--loopmark" aria-hidden="true"><use href="#pen-loop"/></svg>
+            </p>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section id="services" class="section">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Services</p>
-          <h2>What we do</h2>
-          <p>Engagements range from a focused assessment to building and operating a complete platform. We can own a project end to end or work alongside your existing team.</p>
-        </div>
-        <div class="cards">
-          <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg>
-            <h3>Custom software &amp; web apps</h3>
-            <p>Modern web applications, internal tools, and customer portals, built with tested, maintainable code and designed around how your business actually works.</p>
-          </article>
-          <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 010-8 5 5 0 019.6-1.5A4 4 0 1117 18H7z"/></svg>
-            <h3>Cloud &amp; DevOps</h3>
-            <p>Cloud architecture, CI/CD pipelines, environments, monitoring, and release practices that let you ship often and sleep well.</p>
-          </article>
-          <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2"/><circle cx="12" cy="12" r="3"/></svg>
-            <h3>AI &amp; automation</h3>
-            <p>Practical AI and workflow automation that removes manual steps, connects disconnected systems, and puts accurate data where people need it.</p>
-          </article>
-          <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"/><path d="M9 12l2 2 4-4"/></svg>
-            <h3>Security &amp; compliance readiness</h3>
-            <p>Planning and preparation for frameworks such as SOC 2 and HIPAA: gap assessments, policies, controls, and roadmaps that make audits predictable.</p>
-          </article>
-          <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
-            <h3>Fractional technical leadership</h3>
-            <p>CTO-level guidance on a flexible basis: technology roadmaps, architecture decisions, vendor and build-vs-buy evaluations, and engineering practices.</p>
-          </article>
-          <article class="card">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h6v6H4zM14 11h6v6h-6zM10 10h4v4"/></svg>
-            <h3>Systems integration</h3>
-            <p>Connecting the platforms you already rely on, such as commerce, shipping, payments, and accounting, so data flows once and stays consistent.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <!-- ============ SERVICES AT A GLANCE ============ -->
+    <nav class="glance wrap" id="glance" aria-labelledby="glance-title">
+      <h2 id="glance-title" class="glance__label">Services at a glance</h2>
+      <ol class="glance__list">
+        <li class="glance__item glance__item--key">
+          <a href="#svc-leadership">
+            <span class="glance__no">01 <span class="flag">key offer</span></span>
+            <span class="glance__name">Fractional technology leadership</span>
+            <span class="glance__line">A senior leader who sets the strategy and still writes the code.</span>
+          </a>
+        </li>
+        <li class="glance__item">
+          <a href="#svc-architecture">
+            <span class="glance__no">02</span>
+            <span class="glance__name">Architecture &amp; planning</span>
+            <span class="glance__line">Draw the system first, so the plan and the dates hold up.</span>
+          </a>
+        </li>
+        <li class="glance__item">
+          <a href="#svc-delivery">
+            <span class="glance__no">03</span>
+            <span class="glance__name">AI-first delivery</span>
+            <span class="glance__line">Focused projects shipped fast, and teams set up to build with AI.</span>
+          </a>
+        </li>
+        <li class="glance__item">
+          <a href="#compliance">
+            <span class="glance__no">04 <span class="flag">flagship</span></span>
+            <span class="glance__name">SOC&nbsp;2 &amp; HIPAA</span>
+            <span class="glance__line">Audit-ready, without hiring a security team first.</span>
+          </a>
+        </li>
+        <li class="glance__item">
+          <a href="#svc-diligence">
+            <span class="glance__no">05</span>
+            <span class="glance__name">Technical due diligence</span>
+            <span class="glance__line">Your architecture story, ready for investors.</span>
+          </a>
+        </li>
+      </ol>
+    </nav>
 
-    <section id="approach" class="section section-alt">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">How we work</p>
-          <h2>A business-oriented approach</h2>
-          <p>We find out the results you want to achieve, then adapt technology to deliver them, and we stay with you until you have them.</p>
-        </div>
-        <ol class="steps">
-          <li>
-            <span class="step-num">01</span>
-            <h3>Discover</h3>
-            <p>We learn your goals, constraints, and current systems, and agree on what success looks like.</p>
+    <!-- ============ 01 SERVICES ============ -->
+    <section class="chapter wrap sheet" id="services" aria-labelledby="services-title">
+      <div class="margin">
+        <p class="chapter__no">§ 01</p>
+        <p class="chapter__label">Services</p>
+        <p class="note">Every service runs the same way: we step in for the work, step out when it ships, and step back in when you need us. See § 02.</p>
+      </div>
+
+      <div class="body">
+        <h2 id="services-title">A leader and a builder, in one seat.</h2>
+        <p class="lede measure">Most growing companies need two things at once: someone to set direction, and someone to get it built. We do both. Start with leadership, or with a single project.</p>
+
+        <ol class="practices">
+          <li class="practice practice--key" id="svc-leadership">
+            <p class="practice__no" aria-hidden="true">01</p>
+            <div class="practice__main">
+              <h3>Fractional technology leadership, hands-on <span class="flag">key offer</span></h3>
+              <p class="practice__promise">Senior capacity without a full-time executive hire.</p>
+              <p>We own technology the way a CTO would: strategy, roadmap, architecture, budget and the conversation with your board. Then we open the editor and build. No handing a slide deck to someone else.</p>
+            </div>
+            <div class="practice__side">
+              <div class="modes">
+                <div class="mode">
+                  <h4 class="kicker">You have a team</h4>
+                  <p>We lead it and make it more effective: clear priorities, sound practices, AI-first workflows, and coaching for your leads.</p>
+                </div>
+                <div class="mode">
+                  <h4 class="kicker">You don’t, yet</h4>
+                  <p>We are the hands. We build the first version ourselves, then help you hire the team that takes it forward.</p>
+                </div>
+              </div>
+              <p class="keep"><span class="kicker">You get</span> One seat that covers the plan and the code.</p>
+            </div>
           </li>
-          <li>
-            <span class="step-num">02</span>
-            <h3>Design</h3>
-            <p>A business case, architecture, and phased plan, so every investment maps to a clear outcome.</p>
+
+          <li class="practice" id="svc-architecture">
+            <p class="practice__no" aria-hidden="true">02</p>
+            <div class="practice__main">
+              <h3>Architecture &amp; planning</h3>
+              <p class="practice__promise">Plan through architecture.</p>
+              <p>A good plan is a drawing before it is a date. We map the system you have and the one you need, then build the roadmap and the estimates from that drawing, so timelines come with reasons.</p>
+            </div>
+            <div class="practice__side">
+              <h4 class="kicker">What we do</h4>
+              <ul class="ticks">
+                <li>A 3–12 month technology roadmap tied to business goals</li>
+                <li>Architecture and cloud review, including technical debt</li>
+                <li>Estimates built from the architecture, not guesses</li>
+                <li>A path from early-stage code to a platform that scales</li>
+              </ul>
+              <p class="keep"><span class="kicker">You get</span> A plan your board and your engineers can both read.</p>
+            </div>
           </li>
-          <li>
-            <span class="step-num">03</span>
-            <h3>Build</h3>
-            <p>Short iterations with automated testing, code review, and regular demos. No surprises at the end.</p>
+
+          <li class="practice" id="svc-delivery">
+            <p class="practice__no" aria-hidden="true">03</p>
+            <div class="practice__main">
+              <h3>AI-first project delivery &amp; team enablement</h3>
+              <p class="practice__promise">Focused work, shipped fast. A team that keeps the speed.</p>
+              <p>For a defined project, we scope it tight, build it AI-first and ship it in small releases you can see. For your team, we make AI-first development the daily practice, not a pilot.</p>
+            </div>
+            <div class="practice__side">
+              <h4 class="kicker">What we do</h4>
+              <ul class="ticks">
+                <li>Ship full-stack features and products: web, mobile, backend, data</li>
+                <li>Set up Cursor, Claude Code and the workflow around them</li>
+                <li>Add AI code review to every pull request</li>
+                <li>Pair with your engineers on real work, not demos</li>
+              </ul>
+              <p class="keep"><span class="kicker">You get</span> Working software, and a team that builds faster with AI.</p>
+            </div>
           </li>
-          <li>
-            <span class="step-num">04</span>
-            <h3>Release &amp; support</h3>
-            <p>Careful, staged releases, monitoring, documentation, and training to make sure the value sticks.</p>
+
+          <li class="practice practice--flagship" id="svc-compliance">
+            <p class="practice__no" aria-hidden="true">04</p>
+            <div class="practice__main">
+              <h3>SOC&nbsp;2 &amp; HIPAA compliance <span class="flag">flagship</span></h3>
+              <p class="practice__promise">The report your enterprise customers ask for, without a security team.</p>
+              <p>We own the whole program, from choosing the tools to closing out the audit, and leave your team able to run it.</p>
+              <p><a class="textlink" href="#compliance">Read the full ledger</a></p>
+            </div>
+            <div class="practice__side">
+              <h4 class="kicker">What we do</h4>
+              <ul class="ticks">
+                <li>Policies, controls and evidence</li>
+                <li>Compliance automation with Vanta</li>
+                <li>Auditor selection and remediation</li>
+                <li>HIPAA readiness planning for healthcare products</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="practice" id="svc-diligence">
+            <p class="practice__no" aria-hidden="true">05</p>
+            <div class="practice__main">
+              <h3>Technical due diligence</h3>
+              <p class="practice__promise">Walk into the raise with answers ready.</p>
+              <p>Investors will look hard at your architecture, security and team. We have led technical due diligence through fundraising, and we prepare you the same way.</p>
+            </div>
+            <div class="practice__side">
+              <h4 class="kicker">What we do</h4>
+              <ul class="ticks">
+                <li>Prepare the architecture and security documentation</li>
+                <li>Find and fix the weak spots before investors do</li>
+                <li>Walk investors through the platform</li>
+                <li>Answer the technical questions as they come in</li>
+              </ul>
+              <p class="keep"><span class="kicker">You get</span> Confidence in the room that your platform will scale.</p>
+            </div>
           </li>
         </ol>
-        <div class="principles">
-          <div><h3>Transparent</h3><p>Plain-language updates, visible progress, and honest trade-offs.</p></div>
-          <div><h3>Quality built in</h3><p>Testing, review, and observability are part of the work, not extras.</p></div>
-          <div><h3>Above and beyond</h3><p>We bring problem-solving persistence: if there is a will, there is a way.</p></div>
+      </div>
+    </section>
+
+    <!-- ============ 02 THE STANDING SEAT ============ -->
+    <section class="chapter wrap sheet" id="standing-seat" aria-labelledby="seat-title">
+      <div class="margin">
+        <p class="chapter__no">§ 02</p>
+        <p class="chapter__label">How we engage</p>
+        <p class="note note--pen">Your right hand, on call.</p>
+        <p class="note">No 6- or 12-month contract. No retainer for idle time.</p>
+      </div>
+
+      <div class="body">
+        <p class="eyebrow">The Standing Seat</p>
+        <h2 id="seat-title"><span class="nw">On the team.</span> <span class="nw"><span class="underlined">Off the clock.<svg class="pen pen--under" aria-hidden="true" preserveAspectRatio="none"><use href="#pen-underline"/></svg></span></span></h2>
+        <p class="lede measure">We keep a seat on your team. When there is work, we step in and do it. When it ships, we step out and the billing stops. When the next project comes, we step back in, already knowing your architecture, your people and your decisions.</p>
+
+        <!-- Desktop diagram: the pen line weaves between "on the work" and "between projects", but never breaks -->
+        <div class="loop" aria-hidden="true">
+          <div class="loop__blocks">
+            <div class="loop__block" style="--x:9.2%; --w:15.8%"><span class="kicker">Step in</span>Launch the product</div>
+            <div class="loop__block" style="--x:41.2%; --w:24%"><span class="kicker">Step back in</span>Re-architecture</div>
+            <div class="loop__block" style="--x:81.2%; --w:18.8%"><span class="kicker">Step back in</span>SOC&nbsp;2 audit</div>
+            <div class="loop__gap" style="--x:26.5%; --w:14%">Step out</div>
+            <div class="loop__gap" style="--x:66.5%; --w:14%">Step out</div>
+          </div>
+          <svg class="loop__line" viewBox="0 0 1000 200" preserveAspectRatio="none"><path class="pen-path" pathLength="1" d="M0 180C40 180 52 70 92 70L250 70C292 70 290 176 330 176c18 0 22-30 4-32-20-2-16 32 6 32C384 176 372 70 412 70L652 70C694 70 690 176 730 176c18 0 22-30 4-32-20-2-16 32 6 32C784 176 772 70 812 70L998 70"/></svg>
+        </div>
+        <div class="loop__legend">
+          <span class="loop__lane loop__lane--up">On the work · billed</span>
+          <span class="loop__lane loop__lane--down">Between projects · not billed · still on the team</span>
+        </div>
+
+        <ol class="arc__steps seat__steps">
+          <li class="step">
+            <span class="step__dot" aria-hidden="true">1</span>
+            <h3>Step in</h3>
+            <p>We join for a defined piece of work: a launch, a re-architecture, an audit, a raise. You pay for that work.</p>
+          </li>
+          <li class="step">
+            <span class="step__dot" aria-hidden="true">2</span>
+            <h3>Step out</h3>
+            <p>When it ships, billing stops. We stay reachable and keep the architecture notes and decisions on record.</p>
+          </li>
+          <li class="step">
+            <span class="step__dot" aria-hidden="true">3</span>
+            <h3>Step back in</h3>
+            <p>Next project, we pick up where we left off. No re-hiring, no onboarding from zero.</p>
+          </li>
+          <li class="step step--last">
+            <span class="step__dot" aria-hidden="true"><svg class="pen pen--tinyloop"><use href="#pen-infinity"/></svg></span>
+            <h3>Always</h3>
+            <p>The context stays with us: why the system is built the way it is, and what we would do next.</p>
+          </li>
+        </ol>
+
+        <div class="compare">
+          <table>
+            <caption class="kicker">How it compares</caption>
+            <thead>
+              <tr>
+                <th scope="col"><span class="sr-only">Question</span></th>
+                <th scope="col">Full-time hire</th>
+                <th scope="col">6–12 month contractor</th>
+                <th scope="col" class="is-us">The Standing Seat</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Commitment</th><td data-label="Full-time hire">Permanent</td><td data-label="Contractor">6 to 12 months, signed up front</td><td class="is-us" data-label="Standing Seat">One project at a time</td></tr>
+              <tr><th scope="row">You pay for</th><td data-label="Full-time hire">Salary, equity and benefits, every week</td><td data-label="Contractor">Every hour they’re booked, busy or not</td><td class="is-us" data-label="Standing Seat">The project work</td></tr>
+              <tr><th scope="row">Between projects</th><td data-label="Full-time hire">Still on payroll</td><td data-label="Contractor">Still billing, or gone</td><td class="is-us" data-label="Standing Seat">No bill. Still reachable.</td></tr>
+              <tr><th scope="row">Context</th><td data-label="Full-time hire">Stays, as long as they do</td><td data-label="Contractor">Leaves when the contract ends</td><td class="is-us" data-label="Standing Seat">Kept. We know your system.</td></tr>
+              <tr><th scope="row">Restart</th><td data-label="Full-time hire">A search, then ramp-up</td><td data-label="Contractor">A new contract, then onboarding</td><td class="is-us" data-label="Standing Seat">Pick up where we left off</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
-    <section id="work" class="section">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow">Selected work</p>
-          <h2>Examples of what we deliver</h2>
-          <p>Client names are kept confidential. These summaries show the kinds of problems we solve.</p>
+    <!-- ============ 03 COMPLIANCE ============ -->
+    <section class="chapter chapter--inset" id="compliance" aria-labelledby="compliance-title">
+      <div class="wrap sheet">
+        <div class="margin">
+          <p class="chapter__no">§ 03</p>
+          <p class="chapter__label">Compliance</p>
+          <p class="note note--pen">Our flagship practice.</p>
+          <p class="note">We don’t issue SOC&nbsp;2 reports. Independent CPA firms do. We get you ready and run the process with them.</p>
         </div>
-        <div class="cases">
-          <article class="case">
-            <p class="case-tag">Retail &amp; e-commerce</p>
-            <h3>Resale operations platform</h3>
-            <p>A web platform that runs day-to-day operations for a resale business: inventory and listings synchronized with online marketplaces, sales orders, integrated shipping labels, and payment links, backed by automated testing and a staged release process.</p>
-            <ul class="tags"><li>Web application</li><li>Marketplace integration</li><li>DevOps</li></ul>
-          </article>
-          <article class="case">
-            <p class="case-tag">Healthcare</p>
-            <h3>Compliance readiness program</h3>
-            <p>Planning and structure for a healthcare organization preparing for SOC 2 and HIPAA: scoping, gap analysis, policy and control mapping, and a practical roadmap to audit readiness.</p>
-            <ul class="tags"><li>SOC 2</li><li>HIPAA</li><li>Program planning</li></ul>
-          </article>
-          <article class="case">
-            <p class="case-tag">Software product</p>
-            <h3>SaaS product build &amp; operations</h3>
-            <p>Product engineering for a subscription web application, from architecture and feature delivery to production monitoring and release management.</p>
-            <ul class="tags"><li>SaaS</li><li>Cloud</li><li>Observability</li></ul>
-          </article>
+
+        <div class="body">
+          <h2 id="compliance-title">SOC&nbsp;2 and HIPAA, without a security team.</h2>
+          <p class="lede measure">Enterprise customers and investors want proof you take security seriously. Compliance gets done when someone owns it. We own it, from choosing the tools to closing out the audit, and we have done it at SaaS companies with no dedicated security team.</p>
+
+          <div class="ledger">
+            <table>
+              <caption><span class="kicker">The SOC&nbsp;2 ledger</span> <span class="ledger__cap">What gets done, and what you walk away with.</span></caption>
+              <thead>
+                <tr>
+                  <th scope="col" class="c-no">No.</th>
+                  <th scope="col">The work</th>
+                  <th scope="col">You walk away with</th>
+                  <th scope="col" class="c-ok"><span class="sr-only">Status</span></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="c-no">01</td>
+                  <td data-label="The work"><strong>Plan.</strong> Pick the scope, the trust criteria and the compliance platform.</td>
+                  <td data-label="You walk away with">A plan with owners and dates.</td>
+                  <td class="c-ok"><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg></td>
+                </tr>
+                <tr>
+                  <td class="c-no">02</td>
+                  <td data-label="The work"><strong>Policies.</strong> Write the policies: security, access, change management, risk, continuity.</td>
+                  <td data-label="You walk away with">Policies that match how your team really works.</td>
+                  <td class="c-ok"><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg></td>
+                </tr>
+                <tr>
+                  <td class="c-no">03</td>
+                  <td data-label="The work"><strong>Controls.</strong> Put access controls, audit logging and change management in place in your cloud.</td>
+                  <td data-label="You walk away with">Controls mapped to real systems, not a spreadsheet.</td>
+                  <td class="c-ok"><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg></td>
+                </tr>
+                <tr>
+                  <td class="c-no">04</td>
+                  <td data-label="The work"><strong>Automation.</strong> Roll out Vanta to monitor controls and collect evidence across your cloud accounts.</td>
+                  <td data-label="You walk away with">Evidence that collects itself.</td>
+                  <td class="c-ok"><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg></td>
+                </tr>
+                <tr>
+                  <td class="c-no">05</td>
+                  <td data-label="The work"><strong>Continuity.</strong> Design and validate disaster recovery for your platform.</td>
+                  <td data-label="You walk away with">A recovery plan built for your real architecture.</td>
+                  <td class="c-ok"><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg></td>
+                </tr>
+                <tr>
+                  <td class="c-no">06</td>
+                  <td data-label="The work"><strong>Audit.</strong> Hire the auditor, act as their main contact, and drive every finding to closure.</td>
+                  <td data-label="You walk away with">Findings closed on time.</td>
+                  <td class="c-ok"><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg></td>
+                </tr>
+                <tr>
+                  <td class="c-no">07</td>
+                  <td data-label="The work"><strong>Handoff.</strong> Document the recurring work and train the people who will own it. We stay on call for the next audit cycle.</td>
+                  <td data-label="You walk away with">A program your team runs day to day.</td>
+                  <td class="c-ok"><svg class="pen pen--tick" aria-hidden="true"><use href="#pen-check"/></svg></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="hipaa">
+            <h3>Building for healthcare?</h3>
+            <p>We plan HIPAA readiness the same way. We map the Security Rule’s administrative, physical and technical safeguards to your systems, find the gaps, and hand you a prioritized plan your engineers can work from.</p>
+            <p><a class="btn btn--ghost" href="#contact">Talk about SOC&nbsp;2 or HIPAA <span aria-hidden="true">→</span></a></p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section section-alt">
-      <div class="container about-grid">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>About Blue Pen Solutions</h2>
-          <p>Blue Pen Solutions is a technology consulting company. We bring deep experience in enterprise software architecture, engineering leadership, and modern cloud development to organizations that need technology to work for the business, not the other way around.</p>
-          <p>Our philosophy has always been simple: take a business-oriented focus first and use technology second. We work with established companies and growing ones, providing complete solutions or targeted expertise as needed.</p>
+    <!-- ============ 04 HOW WE WORK ============ -->
+    <section class="chapter wrap sheet" id="how-we-work" aria-labelledby="work-title">
+      <div class="margin">
+        <p class="chapter__no">§ 04</p>
+        <p class="chapter__label">How we work</p>
+        <p class="note">Business first, technology second. On our first website in 2003, and still true.</p>
+      </div>
+
+      <div class="body">
+        <h2 id="work-title" class="motto"><span class="nw">Get clear.</span> <span class="nw">Stay focused.</span> <span class="nw"><span class="underlined">Architecture is the plan.<svg class="pen pen--under" aria-hidden="true" preserveAspectRatio="none"><use href="#pen-underline"/></svg></span></span></h2>
+        <p class="lede measure">Most surprises in software come from fuzzy goals and plans nobody can see. So we get clear on the business goal, keep the work focused on it, and draw the system before we commit to a date. Then we tell you where things stand in plain business terms.</p>
+
+        <div class="work">
+          <ol class="promises">
+            <li>
+              <h3>A written plan</h3>
+              <p>One page: the goal, what’s in, what’s out, the risks and the date. Agreed before work starts.</p>
+            </li>
+            <li>
+              <h3>Estimates from the architecture</h3>
+              <p>We sketch the system first, then estimate from the sketch. Every date comes with its reasons.</p>
+            </li>
+            <li>
+              <h3>Tradeoffs you can decide on</h3>
+              <p>When there is a choice, you get the options with their cost, time and risk, plus our recommendation.</p>
+            </li>
+            <li>
+              <h3>Status in plain language</h3>
+              <p>A short, regular note: what’s done, what’s next, what’s at risk, and what we need from you.</p>
+            </li>
+            <li>
+              <h3>Small releases, shipped often</h3>
+              <p>Small, meaningful releases beat a big reveal. You see progress as it happens.</p>
+            </li>
+          </ol>
+
+          <figure class="card card--status" aria-labelledby="status-title">
+            <figcaption class="card__head">
+              <span id="status-title">Status note</span>
+              <span class="card__meta">a sample</span>
+            </figcaption>
+            <dl class="status">
+              <div><dt>Done</dt><dd>Checkout flow is live for all customers.</dd></div>
+              <div><dt>Next</dt><dd>Admin reporting, then a load test before the sales push.</dd></div>
+              <div><dt>Risk</dt><dd>The payment vendor’s test environment is slow. Could cost two days.</dd></div>
+              <div class="status__ask"><dt><span class="ask">Decide<svg class="pen pen--circle pen--circle-ask" viewBox="0 0 200 84" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M34 20C76 3 168 5 190 31c17 21-26 46-92 46C36 77 5 62 10 41 14 24 48 12 96 9c29-2 57 1 76 8"/></svg></span></dt><dd>Launch reporting to everyone, or to a small group first? <em>We recommend the small group.</em></dd></div>
+            </dl>
+          </figure>
         </div>
-        <ul class="checklist">
-          <li>Enterprise architecture &amp; software engineering</li>
-          <li>Retail, e-commerce, and operations systems</li>
-          <li>Healthcare compliance planning</li>
-          <li>Cloud-native delivery with automated testing</li>
-          <li>Responsible, practical use of AI</li>
-        </ul>
       </div>
     </section>
 
-    <section id="contact" class="section contact">
-      <div class="container contact-inner">
-        <h2>Let's talk about what you're building</h2>
-        <p>Tell us about your goals, and we'll follow up to schedule an introductory conversation.</p>
-        <!-- TODO(Tom): replace the placeholder address below with the real contact email (it appears twice: href and link text). -->
-        <a class="btn btn-light" href="mailto:hello@bluepensolutions.com?subject=Project%20inquiry">hello@bluepensolutions.com</a>
+    <!-- ============ 05 CAPABILITIES ============ -->
+    <section class="chapter wrap sheet" id="capabilities" aria-labelledby="cap-title">
+      <div class="margin">
+        <p class="chapter__no">§ 05</p>
+        <p class="chapter__label">Capabilities</p>
+        <p class="note">Grouped by the problem it solves. The tools are listed underneath for your engineers.</p>
+      </div>
+
+      <div class="body">
+        <h2 id="cap-title">The full index.</h2>
+        <p class="lede measure">Everything we can take on, from the board meeting to the build pipeline.</p>
+
+        <div class="index">
+          <section class="index__group" aria-labelledby="cap-a">
+            <h3 id="cap-a"><span class="index__letter">A</span> Leadership &amp; strategy</h3>
+            <ul>
+              <li>Technology strategy and a roadmap tied to business goals</li>
+              <li>A partner to the CEO, and a clear voice in the board room</li>
+              <li>Technical due diligence for fundraising</li>
+              <li>Technology budgets owned and spent where they count</li>
+              <li>Hiring, and R&amp;D organized into focused product teams</li>
+              <li>Distributed teams led across time zones</li>
+              <li>Engineers coached into leads and managers</li>
+              <li>An acquired product brought onto your stack and security posture</li>
+            </ul>
+            <p class="index__tech">Agile · Scrum · SAFe · Jira · ClickUp · Miro · Figma</p>
+          </section>
+
+          <section class="index__group" aria-labelledby="cap-b">
+            <h3 id="cap-b"><span class="index__letter">B</span> Architecture &amp; platforms</h3>
+            <ul>
+              <li>Early-stage code turned into a consistent platform that scales</li>
+              <li>Legacy systems moved to the cloud, dozens of services at a time</li>
+              <li>Microservices and event-driven systems</li>
+              <li>Multi-tenant and white-label products run from configuration, not forked code</li>
+              <li>Feature-flag platforms for staged, targeted rollouts</li>
+              <li>Database migrations, like SQL Server to PostgreSQL</li>
+              <li>Systems designed for availability and transaction volume</li>
+            </ul>
+            <p class="index__tech">Microservices · Event-driven APIs · REST · GraphQL · Serverless · YAML/JSON configuration</p>
+          </section>
+
+          <section class="index__group" aria-labelledby="cap-c">
+            <h3 id="cap-c"><span class="index__letter">C</span> AI engineering</h3>
+            <ul>
+              <li>AI-first development as daily practice, not a pilot</li>
+              <li>AI code review on every pull request</li>
+              <li>Manual data work automated away</li>
+              <li>AI-assisted parsing of messy third-party documents</li>
+              <li>Data architecture that serves AI, analytics and BI as one asset</li>
+            </ul>
+            <p class="index__tech">Cursor · Claude Code · ChatGPT · Bolt AI</p>
+          </section>
+
+          <section class="index__group" aria-labelledby="cap-d">
+            <h3 id="cap-d"><span class="index__letter">D</span> Cloud &amp; DevOps</h3>
+            <ul>
+              <li>Multi-account AWS with security boundaries and cost separation</li>
+              <li>Environments created automatically, with infrastructure as code</li>
+              <li>CI/CD pipelines that make releases routine</li>
+              <li>Containers and Kubernetes, or serverless where it fits</li>
+              <li>Cloud spend you can trace to a product and a budget</li>
+            </ul>
+            <p class="index__tech">AWS (Lambda, EC2, RDS, CloudFront, CloudWatch, Cognito, CloudFormation) · Azure · Google Cloud · Terraform · Pulumi · Kubernetes · GitHub Actions · GitLab CI/CD · Vercel</p>
+          </section>
+
+          <section class="index__group" aria-labelledby="cap-e">
+            <h3 id="cap-e"><span class="index__letter">E</span> Security &amp; compliance</h3>
+            <ul>
+              <li>SOC&nbsp;2 from first policy to closed audit</li>
+              <li>HIPAA readiness planning</li>
+              <li>Access controls and audit logging</li>
+              <li>Change, risk and access management processes</li>
+              <li>Disaster recovery designed and validated</li>
+              <li>Compliance monitoring that runs itself</li>
+            </ul>
+            <p class="index__tech">SOC&nbsp;2 · HIPAA · Vanta · AWS security services</p>
+          </section>
+
+          <section class="index__group" aria-labelledby="cap-f">
+            <h3 id="cap-f"><span class="index__letter">F</span> Product engineering</h3>
+            <ul>
+              <li>New SaaS products taken from zero to one</li>
+              <li>Full-stack web applications</li>
+              <li>Mobile apps, consumer and in-the-field</li>
+              <li>Backend services and APIs</li>
+              <li>Data models and databases built to grow</li>
+              <li>Team standards for coding, testing, branching and review</li>
+            </ul>
+            <p class="index__tech">Next.js · React · React Native · TypeScript · Node.js · Python · C#/.NET · ASP.NET Core · Entity Framework Core · Java · Kotlin · PostgreSQL · SQL Server · MongoDB · Redis</p>
+          </section>
+
+          <section class="index__group" aria-labelledby="cap-g">
+            <h3 id="cap-g"><span class="index__letter">G</span> Integrations</h3>
+            <ul>
+              <li>Bank transaction ingest, automated</li>
+              <li>Payment integrations</li>
+              <li>Third-party and vendor APIs connected in production</li>
+              <li>Many interdependent services kept working through a migration</li>
+            </ul>
+            <p class="index__tech">Plaid · Payments · REST &amp; event-driven APIs</p>
+          </section>
+
+          <section class="index__group" aria-labelledby="cap-h">
+            <h3 id="cap-h"><span class="index__letter">H</span> Observability</h3>
+            <ul>
+              <li>A logging and metrics strategy that sees more without costing more</li>
+              <li>Application health and security monitoring</li>
+              <li>Errors and user sessions you can actually debug</li>
+            </ul>
+            <p class="index__tech">Sentry · New Relic · Splunk · LogRocket · CloudWatch</p>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 ABOUT ============ -->
+    <section class="chapter wrap sheet" id="about" aria-labelledby="about-title">
+      <div class="margin">
+        <p class="chapter__no">§ 06</p>
+        <p class="chapter__label">About</p>
+      </div>
+
+      <div class="body about">
+        <div class="about__text">
+          <h2 id="about-title">Led by Tom Krueger.</h2>
+          <p class="lede">Tom founded Blue Pen Solutions and leads its engagements. He has spent more than 20 years building and shipping production software, including three CTO engagements where he never stopped writing code.</p>
+          <p>He has owned technology across seven SaaS products with a $2M+ budget and a seat on the board, led technical due diligence through fundraising, run retail platforms across more than a thousand stores, and led SOC&nbsp;2 twice at companies with no security team.</p>
+          <p>Today he builds full-stack software almost entirely through AI pair-programming with Cursor and Claude Code, and brings that practice to every team we work with.</p>
+          <p><a class="textlink" href="https://www.linkedin.com/in/thomaskrueger/" rel="noopener">Tom on LinkedIn</a></p>
+        </div>
+
+        <aside class="record" aria-labelledby="record-title">
+          <h3 id="record-title" class="kicker">Track record</h3>
+          <dl>
+            <div><dt>20+</dt><dd>years building and shipping production software</dd></div>
+            <div><dt>3</dt><dd>CTO engagements, hands-on the whole way</dd></div>
+            <div><dt>2&times;</dt><dd>SOC&nbsp;2 led end to end, at SaaS companies with no security team</dd></div>
+            <div><dt>2</dt><dd>SaaS products launched from zero to one</dd></div>
+            <div><dt>70%</dt><dd>fewer code review comments after making AI review standard on every team</dd></div>
+            <div><dt>50k</dt><dd>online orders per hour, fulfilled in-store across 1,100+ stores</dd></div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ 07 CONTACT ============ -->
+    <section class="chapter wrap sheet contact" id="contact" aria-labelledby="contact-title">
+      <div class="margin">
+        <p class="chapter__no">§ 07</p>
+        <p class="chapter__label">Contact</p>
+      </div>
+
+      <div class="body">
+        <h2 id="contact-title">Tell us what you’re building.</h2>
+        <p class="lede measure">A short note is plenty: where the company is, what needs to get built or fixed, and when. The first call is a conversation, not a pitch.</p>
+
+        <!-- TODO(Tom): hello@bluepensolutions.com is a PLACEHOLDER. Confirm the real inbox (and that you own bluepensolutions.com), then update every mailto on this page and the JSON-LD email. -->
+        <p class="contact__email">
+          <a href="mailto:hello@bluepensolutions.com">hello@bluepensolutions.com</a>
+          <svg class="pen pen--under" aria-hidden="true" preserveAspectRatio="none"><use href="#pen-underline"/></svg>
+        </p>
+
+        <div class="contact__grid">
+          <div class="starters">
+            <p class="kicker" id="starters-label">Or start with a subject line</p>
+            <ul aria-labelledby="starters-label">
+              <li><a href="mailto:hello@bluepensolutions.com?subject=Fractional%20technology%20leadership">We need a technology leader <span aria-hidden="true">→</span></a></li>
+              <li><a href="mailto:hello@bluepensolutions.com?subject=Architecture%20and%20a%20plan">We need an architecture and a plan <span aria-hidden="true">→</span></a></li>
+              <li><a href="mailto:hello@bluepensolutions.com?subject=A%20project%20we%20need%20shipped">A project we need shipped <span aria-hidden="true">→</span></a></li>
+              <li><a href="mailto:hello@bluepensolutions.com?subject=SOC%202%20%2F%20HIPAA%20readiness">SOC&nbsp;2 or HIPAA readiness <span aria-hidden="true">→</span></a></li>
+              <li><a href="mailto:hello@bluepensolutions.com?subject=Technical%20due%20diligence">Getting ready for due diligence <span aria-hidden="true">→</span></a></li>
+            </ul>
+          </div>
+
+          <aside class="next" aria-labelledby="next-title">
+            <h3 id="next-title" class="kicker">What happens next</h3>
+            <ol>
+              <li>You send a short note.</li>
+              <li>We talk it through on a call.</li>
+              <li>If it’s a fit, you get a one-page plan: the goal, the scope, the risks and the date.</li>
+            </ol>
+          </aside>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="brand brand-footer">
-        <img src="assets/logo-mark.svg" alt="" width="28" height="28">
-        <span>Blue Pen <strong>Solutions</strong></span>
-      </div>
-      <p>&copy; <span id="year">2026</span> Blue Pen Solutions. All rights reserved.</p>
+  <footer class="colophon">
+    <div class="wrap colophon__inner">
+      <p class="wordmark wordmark--footer" aria-label="Blue Pen Solutions">
+        <span class="wordmark__blue">blue</span><span class="wordmark__dot" aria-hidden="true"></span><span class="wordmark__pen">pen</span>
+        <span class="wordmark__solutions">solutions</span>
+      </p>
+      <p class="colophon__motto">Get clear. Stay focused. Architecture is the plan.</p>
+      <p class="colophon__small">&copy; 2026 Blue Pen Solutions · <a href="#top">Back to top</a></p>
     </div>
   </footer>
 
-  <script>
-    (function () {
-      var t = document.querySelector('.nav-toggle'), n = document.getElementById('site-nav');
-      t.addEventListener('click', function () {
-        var open = t.getAttribute('aria-expanded') === 'true';
-        t.setAttribute('aria-expanded', String(!open));
-        n.classList.toggle('open', !open);
-      });
-      n.addEventListener('click', function (e) {
-        if (e.target.tagName === 'A') { t.setAttribute('aria-expanded', 'false'); n.classList.remove('open'); }
-      });
-      document.getElementById('year').textContent = new Date().getFullYear();
-    })();
-  </script>
+  <script src="pen.js" defer></script>
 </body>
 </html>
